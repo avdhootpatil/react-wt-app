@@ -57,16 +57,19 @@ class FortCard extends React.Component {
     return (
       <div style={{display : 'inline-block',width :'25%',
                    marginLeft:'2em',marginTop: '2em'}}>
-        <Card style={{borderRadius :'20px'}} className={classes.card}>
+        <Card style={{borderRadius :'20px',background: '#EFEFEF',
+                      boxShadow:'10px 10px grey'}} 
+                      className={classes.card}>
           <CardHeader
             avatar={
-              <Avatar aria-label="Recipe" className={classes.avatar}>
+              <Avatar aria-label="Recipe" className={classes.avatar}
+                      style={{background:'#9099A2'}}>
                 R
               </Avatar>
             }
             action={
               <IconButton>
-                <MoreVertIcon />
+               
               </IconButton>
             }
             title="Raigad Fort"
