@@ -22,6 +22,9 @@ import MoreVertIcon from "material-ui-icons/MoreVert";
 const styles = theme => ({
   card: {
     maxWidth: 400,
+    borderRadius :'20px',
+    background: '#EFEFEF',
+    boxShadow:'10px 10px grey'
   },
   media: {
     height: 194,
@@ -40,8 +43,17 @@ const styles = theme => ({
     transform: 'rotate(180deg)',
   },
   avatar: {
-    backgroundColor: red[500],
+    backgroundColor:'#9099A2',
   },
+  divStyle: {
+    display : 'inline-block',
+    width :'25%',
+    marginLeft:'2em',marginTop: '2em'
+  },
+  cardHeaderStyle: {
+    textTransform: 'UpperCase',
+    fontWeight:'bolder'
+  }
 });
 
 class FortCard extends React.Component {
@@ -55,16 +67,12 @@ class FortCard extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div style={{display : 'inline-block',width :'25%',
-                   marginLeft:'2em',marginTop: '2em'}}>
-        <Card style={{borderRadius :'20px',background: '#EFEFEF',
-                      boxShadow:'10px 10px grey'}} 
-                      className={classes.card}>
-          <CardHeader
+      <div className= {classes.divStyle}>
+        <Card className={classes.card}>
+          <CardHeader className={classes.cardHeaderStyle}
             avatar={
-              <Avatar aria-label="Recipe" className={classes.avatar}
-                      style={{background:'#9099A2'}}>
-                R
+              <Avatar aria-label="Recipe" className={classes.avatar} >
+                  R
               </Avatar>
             }
             action={
