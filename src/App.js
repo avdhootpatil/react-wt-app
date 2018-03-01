@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import FortCard from './Card.js';
+
+
+let fakeFortData = {
+
+} 
+ 
 
 let defaultHeaderStyle = {
   'font-size' : '54px'
@@ -17,7 +25,7 @@ let defaultCardStyle ={
 class Filter extends Component{
   render () {
     return(
-        <div>
+        <div style={{marginBottom: '3em'}}>
           <input type ='text'/>
         </div>
     );
@@ -25,7 +33,7 @@ class Filter extends Component{
 }
 
 
-class Card extends Component{
+class TestCard extends Component{
   render () {
     return(
       <div style={{...defaultCardStyle,display : "inline-block",width :"25%"}}>
@@ -37,20 +45,30 @@ class Card extends Component{
   }
 }
 
+
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App" >
         <header >
           <h1>Forts in Maharashtra</h1>
         </header>
-        <Filter/>    
-        <Card />
-        <Card />
-        <Card />   
-        <Card />
-        <Card />
-        <Card />       
+         
+        <div>
+        <MuiThemeProvider>
+          <FortCard />
+          <FortCard />  
+          <FortCard />
+          <FortCard />
+          <FortCard />
+          <FortCard />  
+               
+        </MuiThemeProvider>
+        
+        </div>
+        
+           
       </div>
     );
   }
