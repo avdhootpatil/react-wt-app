@@ -17,6 +17,7 @@ import FavoriteIcon from "material-ui-icons/Favorite";
 import ShareIcon from "material-ui-icons/Share";
 import ExpandMoreIcon from "material-ui-icons/ExpandMore";
 import MoreVertIcon from "material-ui-icons/MoreVert";
+import App from "./App.js";
 
 
 const styles = theme => ({
@@ -48,7 +49,9 @@ const styles = theme => ({
   divStyle: {
     display : 'inline-block',
     width :'25%',
-    marginLeft:'2em',marginTop: '2em'
+    marginLeft:'2em',
+    marginTop: '2em',
+    marginBottom: '2em'
   },
   cardHeaderStyle: {
     textTransform: 'UpperCase',
@@ -80,20 +83,21 @@ class FortCard extends React.Component {
                
               </IconButton>
             }
-            title="Raigad Fort"
-            subheader="Loction : Raigad District"
+            title={this.props.fort.name}
+            subheader={this.props.fort.location}
           />
           <CardMedia
-            className={classes.media}
-            image="/src/images/raigad1.jpg"
+             className={classes.media}
+             image={this.props.fort.image}
           />
           <CardContent>
             <Typography component="p">
-              Raigad is a hill fort situated in the Mahad, Raigad district of
+              {/* Raigad is a hill fort situated in the Mahad, Raigad district of
               Maharashtra, India. Chhatrapati Shivaji Maharaj built this fort
               and made it his capital in 1674 when he was crowned as the King f
               a Maratha Kingdom which later developed into the Maratha Empire,
-              eventually covering much of western and central India.
+              eventually covering much of western and central India. */}
+              {this.props.fort.information}
             </Typography>
           </CardContent>
           <CardActions className={classes.actions} disableActionSpacing>
@@ -110,7 +114,7 @@ class FortCard extends React.Component {
           </CardActions>
           <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
             <CardContent>
-              <Typography paragraph variant="body2">
+              <Typography paragraph variant="body2" style={{fontWeight:'bold'}}>
                 Information :
               </Typography>
               <Typography paragraph>
@@ -145,4 +149,3 @@ Card.propTypes = {
 };
 
 export default withStyles(styles)(FortCard);
-// export default FortCard;
