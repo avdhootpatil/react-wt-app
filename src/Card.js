@@ -24,8 +24,9 @@ const styles = theme => ({
   card: {
     maxWidth: 400,
     borderRadius :'20px',
-    background: '#EFEFEF',
-    boxShadow:'10px 10px grey'
+    // background: '#EFEFEF',
+    background: '#FFF',
+    boxShadow:'10px 10px green'
   },
   media: {
     height: 194,
@@ -44,7 +45,8 @@ const styles = theme => ({
     transform: 'rotate(180deg)',
   },
   avatar: {
-    backgroundColor:'#9099A2',
+    // backgroundColor:'#9099A2',
+    backgroundColor:'green'
   },
   divStyle: {
     display : 'inline-block',
@@ -75,7 +77,7 @@ class FortCard extends React.Component {
           <CardHeader className={classes.cardHeaderStyle}
             avatar={
               <Avatar aria-label="Recipe" className={classes.avatar} >
-                  R
+                {this.props.fort.name.charAt(0)}
               </Avatar>
             }
             action={
@@ -88,15 +90,10 @@ class FortCard extends React.Component {
           />
           <CardMedia
              className={classes.media}
-             image={this.props.fort.image}
+             image={this.props.fort.images}
           />
           <CardContent>
             <Typography component="p">
-              {/* Raigad is a hill fort situated in the Mahad, Raigad district of
-              Maharashtra, India. Chhatrapati Shivaji Maharaj built this fort
-              and made it his capital in 1674 when he was crowned as the King f
-              a Maratha Kingdom which later developed into the Maratha Empire,
-              eventually covering much of western and central India. */}
               {this.props.fort.information}
             </Typography>
           </CardContent>
@@ -118,23 +115,16 @@ class FortCard extends React.Component {
                 Information :
               </Typography>
               <Typography paragraph>
-                The fort rises 820 metres (2,700 ft) above the sea level and is
-                located in the Sahyadri mountain range.
+                {this.props.fort.para_one}
               </Typography>
               <Typography paragraph>
-                There are approximately 1737 steps leading to the fort. The
-                Raigad Ropeway, an aerial tramway exists to reach the top of the
-                fort in 10 minutes. The fort was looted and destroyed by the
-                British after it was captured in 1818.
+              {this.props.fort.para_two}
               </Typography>
               <Typography paragraph>
-                After capturing Rairi from Chandrarao More, Chhatrapati Shivaji
-                Maharaj also built another fort Lingana around 2 miles away from
-                Raigad. The Lingana fort was used to keep prisoners.
+              {this.props.fort.para_three}
               </Typography>
               <Typography>
-                The Raigad Fort was built by "Chandrarao More" of Jawali and the
-                chief architect/engineer was "Hiroji Indulkar".
+              {this.props.fort.para_four}
               </Typography>
             </CardContent>
           </Collapse>
