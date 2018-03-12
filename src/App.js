@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import FortCard from './Card.js';
+import raigad from './raigad.jpg';
+import rajgad from  './rajgad.jpg';
+import shivneri from  './shivneri.jpg';
+import sindhudurg from  './sindhudurg.jpg';
+import sinhagad from './sinhagad.jpg';
+import torna from './torna.jpg';
+import vijaydurg from './vijaydurg.jpg';
+
+
+
 
 
 let fortData = {
@@ -32,7 +42,7 @@ let fortData = {
                         'Colonel Prarther attacked on Raigad Fort in 1818 and destroyed most of structures including'+ 
                         'King Shivaji’s and Queen’s palaces. They got around Rs.500,000/- in form of gold coins as'+ 
                         'hoard.',
-          images : '\src\images\raigad.jpg'
+          images : raigad
      },
     {
           name : 'Rajgad',
@@ -53,7 +63,7 @@ let fortData = {
                         'Pratapgad. She was just 26 years old then. Her tomb is on Rajgads Padmavati Mahi, before',
           para_four : 
                         'the temple of goddess Padmavati.',
-          images : '/src/images/rajgad.jpg'
+          images : rajgad
      },
      {
           name : 'Shivneri',
@@ -75,7 +85,7 @@ let fortData = {
                         'of Maharaj. After the long period in 1716, the fort was won by Shahu Maharaj. Nowadays,',
           para_four :                           
                         'the structures on the fort are in ruins. Only some broken parts of the buildings can be seen.',
-          images : '/src/images/shivneri.jpg'
+          images : shivneri
      },
      {
           name : 'Sindhudurg',
@@ -103,7 +113,7 @@ let fortData = {
                         // 'been living there for generations. Side the fort there are three wells of drinkable water, which is a nature’s marvel as '+
                         // 'sea surrounds the fort on all four sides. On a rocky island between Sindhudurg and the coast stood the small fort of '+
                         // 'Padmagad, now in ruins. It acted as a shield for Sindhudurg and was also used for shipbuilding.' ,
-          images : '/src/images/sindhudurg.jpg'
+          images : sindhudurg
      },
      {
           name : 'Sinhgad',
@@ -131,7 +141,7 @@ let fortData = {
                         'his life, but his brother "Suryaji" took over and captured the Kondana fort, now known as Sinhagad.',
                         // 'here is an anecdote that upon hearing of Tanajis death, Chhatrapati Shivaji expressed his remorse with the words,'+ 
                         // '"Gad aala, pan Sinha gela" - "The Fort is captured, but the Lion was lost".',
-          images : '/src/images/sinhagad.jpg'
+          images : sinhagad
      },
      {
           name : 'Torna',
@@ -154,7 +164,7 @@ let fortData = {
           para_four : 
                         '"Binicha Darwaja" (Bini Gate) and "Konkan Darwaja" (Konkan Gate). The Binich Darwaja takes you inside the fort, while '+
                         'the Konkan Darwaja takes you to the Budhala Machi.',
-          images : '/src/images/torna.jpg'
+          images : torna
      },
      {
           name : 'Vijaydurg',
@@ -186,7 +196,7 @@ let fortData = {
                         // 'the sea level.'+
                         // 'Approx 1.5 km from the fort in the Wagjotan Creek is a naval dock. The maratha warships were built and repaired '+
                         // 'in this dock. The ships built in this dock were of the 500 tonnage capacity.',
-          images : '/src/images/vijaydurg.jpg'
+          images : vijaydurg
      
      }
     ]

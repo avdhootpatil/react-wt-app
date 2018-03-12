@@ -91,7 +91,8 @@ class FortCard extends React.Component {
           <CardMedia
              className={classes.media}
              image={this.props.fort.images}
-          />
+             title = {this.props.fort.name}
+          /> 
           <CardContent>
             <Typography component="p">
               {this.props.fort.information}
